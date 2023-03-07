@@ -19,7 +19,7 @@ export function ticketModal(el) {
     info = el.info.slice(0, 60) + '...';
   }
 
-  return `<div class="modal scale-up-ver-top">
+  return `<div class="modal scale-down-center">
   <div class="modal__window">
     <button class="modal__close-btn" type="button">
       <svg class="modal__close-icon" width="17" height="17">
