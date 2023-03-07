@@ -1,120 +1,23 @@
-//Change mode LIGHT - DARK by operating system setting
-// body {
-//   @media (prefers-color-scheme: light) {
-//     background-color: #fff3;
-//     transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//     .gallery__txt,
-//     .gallery__link,
-//     .gallery__icon {
-//       color: #000000;
-//       transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
-//     }
-
-//     .gallery__link--text::before {
-//       background: url("../images/vector-light.svg");
-
-//       background-size: contain;
-//       background-repeat: no-repeat;
-//     }
-
-//     .footer__link:hover .footer__text {
-//       padding-left: 5px;
-//       padding-right: 5px;
-//       box-shadow: 0 0 20px $main-color;
-//       border-radius: 10px;
-//       background-color: #000000;
-//     }
-
-//     .footer__link:focus .footer__text {
-//       padding-left: 5px;
-//       padding-right: 5px;
-//       box-shadow: 0 0 20px $main-color;
-//       border-radius: 10px;
-//       background-color: #000000;
-//     }
-
-//     .scroll {
-//       background-color: #000000;
-//       border-radius: 100%;
-//       width: 29px;
-//       height: 29px;
-//     }
-
-//     .header {
-//       background-image: url('../images/header/bg-wh.jpg');
-//       background-position: bottom;
-//       background-repeat: no-repeat;
-//       background-size: cover;
-//     }
-
-//     .gallery__item::after {
-//       border: 1px solid $white-theme-main;
-//     }
-
-//     .gallery__title {
-//       color: $white-theme-main;
-//     }
-
-//     .header__title {
-//       color: $white-theme-main;
-//     }
-
-//     .footer__text {
-//       color: $white-theme-main;
-
-//       &:hover,
-//       &:focus {
-//         color: white;
-//       }
-//     }
-
-//     .input {
-//       background: $white-theme-main;
-//       color: $main-color;
-//     }
-
-//     .search-input::placeholder {
-//       color: $main-color;
-//     }
-
-//     .search-input {
-//       color: $main-color;
-//     }
-
-//     .select-box .options-container {
-//       background: $white-theme-main;
-//     }
-
-//     .selected {
-//       background: $white-theme-main;
-//       color: $main-color;
-//     }
-//   }
-// }
-
-//Change theme LIGHT - DARK by toggle
 .light {
   background-color: #fff3;
   transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 body.light .gallery__txt,
 body.light .gallery__link,
-body.light .gallery__icon{
+body.light .gallery__icon {
   color: #000000;
   transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body.light .gallery__link--text::before{
-  background: url("../images/vector-light.svg");
+body.light .gallery__link--text::before {
+  background: url('../images/vector-light.svg');
 
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-body.light .footer__link:hover .footer__text{
+body.light .footer__link:hover .footer__text {
   padding-left: 5px;
   padding-right: 5px;
   box-shadow: 0 0 20px $main-color;
@@ -122,7 +25,7 @@ body.light .footer__link:hover .footer__text{
   background-color: #000000;
 }
 
-body.light .footer__link:focus .footer__text{
+body.light .footer__link:focus .footer__text {
   padding-left: 5px;
   padding-right: 5px;
   box-shadow: 0 0 20px $main-color;
@@ -130,7 +33,7 @@ body.light .footer__link:focus .footer__text{
   background-color: #000000;
 }
 
-body.light .scroll{
+body.light .scroll {
   background-color: #000000;
   border-radius: 100%;
   width: 29px;
@@ -147,39 +50,39 @@ body.light .header {
 body.light .gallery__item::after {
   border: 1px solid $white-theme-main;
 }
-body.light .gallery__title{
-  color:$white-theme-main;
+body.light .gallery__title {
+  color: $white-theme-main;
 }
-body.light .header__title{
+body.light .header__title {
   color: $white-theme-main;
 }
 
-body.light .footer__text{
+body.light .footer__text {
   color: $white-theme-main;
- &:hover,&:focus{
-  color: white;
- }
+  &:hover,
+  &:focus {
+    color: white;
+  }
 }
 
-body.light .input{
+body.light .input {
   background: $white-theme-main;
   color: $main-color;
 }
-body.light .search-input::placeholder{
+body.light .search-input::placeholder {
   color: $main-color;
 }
-body.light .search-input{
+body.light .search-input {
   color: $main-color;
 }
-body.light .select-box .options-container{
+body.light .select-box .options-container {
   background: $white-theme-main;
 }
 
-body.light .selected{
+body.light .selected {
   background: $white-theme-main;
   color: $main-color;
 }
-
 
 #hybrid {
   visibility: hidden;
@@ -200,13 +103,13 @@ body.light .selected{
   width: 20px;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
+  animation: heartbeat 1.5s ease-in-out infinite;
 
   @include mq(tablet) {
     height: 35px;
     width: 35px;
     top: 90px;
     right: 90px;
-
   }
 
   @include mq(desktop) {
@@ -214,12 +117,11 @@ body.light .selected{
     width: 50px;
     top: 109px;
     right: 138px;
-
   }
 }
 
 #theme-toggle:checked + label {
-  background-color: $main-color;
+  background-color: #fff;
 }
 
 #theme-toggle:not(:checked) + label {
@@ -248,3 +150,89 @@ body.light .selected{
 }
 
 //user-select: none;
+
+.heartbeat {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-7-31 19:7:32
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}

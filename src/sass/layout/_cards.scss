@@ -1,12 +1,11 @@
 a {
   display: block;
 }
-.flex{
+.flex {
   position: relative;
 }
 .gallery {
   position: relative;
-  // top:-50px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -14,13 +13,7 @@ a {
 
   @include mq(tablet) {
     margin: -16px;
-    // top: -80px;
   }
-
-  @include mq(desktop) {
-    // top: -67px;
-  }
-
 }
 
 .gallery__item {
@@ -28,7 +21,7 @@ a {
   z-index: 1;
   width: 130px;
   margin: 10px;
-  transition-property:transform;
+  transition-property: transform;
   @extend %transition;
 
   @include mq(tablet) {
@@ -40,13 +33,11 @@ a {
     flex-basis: calc((100% - 32px * 4) / 4);
   }
 
-  &:hover,&:focus{
+  &:hover,
+  &:focus {
     transform: scale(1.1);
-
   }
 }
-
-
 
 .gallery__item::after {
   content: '';
@@ -114,19 +105,17 @@ a {
   font-size: 14px;
   font-weight: 700;
   color: $main-color;
-  transition-property:box-shadow,border-radius,transform;
+  transition-property: box-shadow, border-radius, transform;
   @extend %transition;
 
   @include mq(tablet) {
     margin-bottom: 8px;
     font-size: 16px;
-
   }
-  &:hover{
+  &:hover {
     box-shadow: 0 0 20px $main-color;
     border-radius: 8px;
     transform: scale(1.1);
-
   }
 }
 .gallery__txt {
@@ -136,13 +125,10 @@ a {
   font-weight: 400;
   color: #ffffff;
 
-
-
   @include mq(tablet) {
     margin-bottom: 8px;
     font-size: 16px;
   }
-
 }
 
 .gallery__link {
@@ -152,12 +138,10 @@ a {
   text-align: center;
   color: #ffffff;
 
-
   @include mq(tablet) {
     font-size: 14px;
     line-height: 1.21;
   }
-
 }
 
 .gallery__icon {
@@ -170,21 +154,19 @@ a {
   z-index: 1;
   cursor: pointer;
 }
-.gallery__link--text{
+.gallery__link--text {
   display: inline-block;
   position: relative;
-  transition-property:box-shadow,border-radius,transform;
+  transition-property: box-shadow, border-radius, transform;
   @extend %transition;
-  &:hover{
-
-
+  &:hover {
     box-shadow: 0 0 20px $main-color;
     border-radius: 8px;
   }
 }
-.gallery__link--text::before{
+.gallery__link--text::before {
   content: '';
-  background: url("../images/vector2.svg");
+  background: url('../images/vector2.svg');
 
   background-size: contain;
   background-repeat: no-repeat;
@@ -198,19 +180,28 @@ a {
   @include mq(tablet) {
     height: 12px;
     width: 12px;
-    top:3px;
-    left:-15px;
+    top: 3px;
+    left: -15px;
   }
 
   @include mq(desktop) {
     height: 15px;
     width: 15px;
-    left:-20px;
+    left: -20px;
   }
-
 }
-.flip-scale-down-diag-2{animation:flip-scale-down-diag-2 1s linear both}
+.flip-scale-down-diag-2 {
+  animation: flip-scale-down-diag-2 1s linear both;
+}
 
-
-@keyframes flip-scale-down-diag-2{0%{transform:scale(1) rotate3d(-1,1,0,0deg)}50%{transform:scale(.4) rotate3d(-1,1,0,0deg)}100%{transform:scale(1) rotate3d(-1,1,0,360deg)}}
-
+@keyframes flip-scale-down-diag-2 {
+  0% {
+    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+  50% {
+    transform: scale(0.4) rotate3d(-1, 1, 0, 0deg);
+  }
+  100% {
+    transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+  }
+}

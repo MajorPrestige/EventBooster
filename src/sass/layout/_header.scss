@@ -86,7 +86,7 @@
     }
   }
 }
-label{
+label {
   display: block;
 }
 .logo-bg {
@@ -173,53 +173,48 @@ label{
   padding: 16px 32px;
   color: #939393;
 
-
   @include mq(mobile) {
     width: 336px;
   }
 }
-.search__container{
+.search__container {
   margin: 0 auto;
   position: relative;
   width: 280px;
   margin-bottom: 24px;
   @include mq(tablet) {
-    width: 336px;
+    width: 288px;
     margin-bottom: 0;
   }
   @include mq(desktop) {
     margin: 0 32px 0 0;
-    width: 288px;
   }
 }
-
 
 .search-input {
   max-width: 280px;
   font-size: 16px;
   box-shadow: none;
-  transition-property:box-shadow;
+  transition-property: box-shadow;
   @extend %transition;
 
   @include mq(tablet) {
-    max-width: 336px;
+    width: 288px;
     margin-right: 32px;
   }
   @include mq(desktop) {
-    width: 288px;
     font-size: 16px;
   }
 }
-.search-input:hover ~ .search-input__button  > .search-input__icon,
-.search-input:focus ~ .search-input__button  > .search-input__icon {
-
+.search-input:hover ~ .search-input__button > .search-input__icon,
+.search-input:focus ~ .search-input__button > .search-input__icon {
   fill: $main-color;
   width: 20px;
   height: 20px;
 }
-.search-input:hover ,.search-input:focus{
+.search-input:hover,
+.search-input:focus {
   box-shadow: 0 0 20px $main-color;
-
 }
 .search-input__button {
   position: absolute;
@@ -233,14 +228,12 @@ label{
   }
 }
 
-
 .search-input__icon {
   fill: #939393;
-  transition-property:fill,width,height;
+  transition-property: fill, width, height;
   @extend %transition;
-
 }
-.search-input__icon:hover{
+.search-input__icon:hover {
   fill: $main-color;
   width: 20px;
   height: 20px;
@@ -259,36 +252,34 @@ label{
   flex-direction: column;
   justify-content: center;
 
-
   @include mq(tablet) {
     flex-direction: row;
   }
   @include mq(desktop) {
-    margin:0 auto;
-    display:inline-flex;
+    margin: 0 auto;
+    display: inline-flex;
   }
 }
 
 // Стили селектора страны
-.select-container{
+.select-container {
   max-width: 280px;
   margin: 0 auto;
   @include mq(tablet) {
-
     width: 366px;
   }
 
   @include mq(desktop) {
     width: 288px;
-    margin:0;
+    margin: 0;
   }
 }
-.select-box{
+.select-box {
   width: 280px;
   position: relative;
   display: flex;
   flex-direction: column;
-  color: #CCCCCC;
+  color: #cccccc;
 
   @include mq(tablet) {
     font-size: 16px;
@@ -301,10 +292,10 @@ label{
   }
 }
 
-.select-box .options-container{
+.select-box .options-container {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
-  color: #CCCCCC;
+  color: #cccccc;
   max-height: 0;
   width: 280px;
   opacity: 0;
@@ -314,18 +305,15 @@ label{
 
   order: 1;
   @include mq(tablet) {
-    width: 336px;
-  }
-  @include mq(desktop) {
     width: 288px;
   }
 }
 
-.selected{
+.selected {
   width: 280px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
-  height:40px;
+  height: 40px;
   border-radius: 20px;
   border: none;
   color: rgba(147, 147, 147, 1);
@@ -333,26 +321,25 @@ label{
   font-size: 16px;
   line-height: 1.2;
   position: relative;
-  padding:10px 32px;
+  padding: 10px 32px;
   order: 0;
   box-shadow: none;
-  transition-property:box-shadow;
+  transition-property: box-shadow;
   @extend %transition;
   @include mq(tablet) {
     font-size: 16px;
-    width: 336px;
-    padding:10px;
+    width: 288px;
+    padding: 10px;
   }
 
   @include mq(desktop) {
-    width: 288px;
     font-size: 16px;
   }
 }
 
-.selected::after{
+.selected::after {
   content: '';
-  background: url("../images/header/selector.svg");
+  background: url('../images/header/selector.svg');
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -362,19 +349,19 @@ label{
   right: 30px;
   top: 15px;
   transition: all 0.4s;
-  transition-property:width;
+  transition-property: width;
   @extend %transition;
 }
 
-.selected:hover,.selected:focus{
+.selected:hover,
+.selected:focus {
   box-shadow: 0 0 20px $main-color;
 }
- .selected:hover::after{
-  background: url("../images/select-pink.svg");
+.selected:hover::after {
+  background: url('../images/select-pink.svg');
   background-size: contain;
   background-repeat: no-repeat;
   width: 20px;
-
 }
 
 .select-box .options-container.active {
@@ -389,39 +376,37 @@ label{
   }
 
   @include mq(desktop) {
-
     font-size: 16px;
     max-height: 100px;
   }
-
 }
 
-.select-box .options-container.active  + .selected::after{
-transform: rotateX(180deg);
-top:-15px;
-
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -15px;
 }
 
 .select-box .option,
 .selected {
-padding-left:30px;
-cursor: pointer;
-}
-
-.select-box .option:hover{
-  background-color: $main-color;
-}
-
-.select-box label{
+  padding-left: 30px;
   cursor: pointer;
 }
 
-.select-box .option .radio{
-  display: none;
-
+.select-box .option:hover {
+  background-color: $main-color;
 }
 
-.text-focus-in{animation:text-focus-in 2s cubic-bezier(.55,.085,.68,.53) both}
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+.text-focus-in {
+  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
 
 /* ----------------------------------------------
  * Generated by Animista on 2022-7-31 14:58:2
@@ -431,4 +416,13 @@ cursor: pointer;
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
- @keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}

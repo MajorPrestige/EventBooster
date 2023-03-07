@@ -1,6 +1,5 @@
 'use strict';
 
-
 let maskEl = document.querySelector('.mask');
 
 window.addEventListener('load', () => {
@@ -9,6 +8,3 @@ window.addEventListener('load', () => {
     maskEl.remove();
   }, 500);
 });
-
-
-
